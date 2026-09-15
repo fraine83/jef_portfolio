@@ -1012,3 +1012,102 @@ body {
 .contact-link:hover strong {
     color: var(--color-accent-light);
 }
+
+/* =========================
+   PROJECT MODAL
+========================= */
+
+.project-card {
+    cursor: pointer;
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3rem;
+
+    background: rgba(4, 7, 12, 0.88);
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal);
+}
+
+.project-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.project-modal-content {
+    width: min(1100px, 90vw);
+    min-height: 600px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+
+    transform: scale(0.94);
+
+    transition: transform var(--transition-normal);
+}
+
+.project-modal.is-open .project-modal-content {
+    transform: scale(1);
+}
+
+.project-modal-content .project-card {
+    width: 100%;
+    min-height: 600px;
+
+    border: 0;
+    border-radius: 0;
+
+    cursor: default;
+}
+
+.project-modal-content {
+    width: min(1100px, 90vw);
+    min-height: 600px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: var(--color-surface);
+    border: 1px solid rgba(77, 163, 255, 0.45);
+    border-radius: var(--radius-xl);
+
+    box-shadow:
+        0 0 40px rgba(77, 163, 255, 0.12),
+        0 30px 80px rgba(0, 0, 0, 0.55);
+
+    transform: scale(0.94);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.project-modal.is-open .project-modal-content {
+    transform: scale(1);
+}
+.project-modal-content .project-background {
+    filter: brightness(1.15) saturate(1.15);
+}

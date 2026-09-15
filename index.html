@@ -193,7 +193,8 @@
           </div>
 
           <div class="project-grid">
-            <article class="project-card project-featured">
+            <article class="project-card project-featured" 
+                      tabindex="0" role="button"  >
               <div class="project-meta">
                 <span>01</span>
                 <span>NETWORKING</span>
@@ -218,7 +219,8 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" 
+                      tabindex="0" role="button">
               <div class="project-meta">
                 <span>02</span>
                 <span>AUTOMATION</span>
@@ -242,7 +244,8 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" 
+                    tabindex="0" role="button">
               <div class="project-meta">
                 <span>03</span>
                 <span>SysAd</span>
@@ -267,7 +270,8 @@
                 <span>Bash</span>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" 
+              tabindex="0" role="button">
               <div class="project-meta">
                 <span>04</span>
                 <span>SAAS</span>
@@ -290,7 +294,8 @@
                 <span>Vercel</span>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" 
+                    tabindex="0" role="button"  >
               <div class="project-meta">
                 <span>05</span>
                 <span>WEB PLATFORM</span>
@@ -307,7 +312,8 @@
                 <span>MySQL</span>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" 
+                    tabindex="0" role="button">
               <div class="project-meta">
                 <span>06</span>
                 <span>MEDIA INFRASTRUCTURE</span>
@@ -467,6 +473,19 @@
           </button>
         </div>
       </section>
+      <!-- =========================
+     PROJECT ENLARGE MODAL
+========================== -->
+<div
+    class="project-modal"
+    id="projectModal"
+    aria-hidden="true"
+>
+    <div
+        class="project-modal-content"
+        id="projectModalContent"
+    ></div>
+</div>
     </main>
 
     <!-- =========================
@@ -552,5 +571,6 @@
     <script type="module" src="./js/navigation.js"></script>
     <script type="module" src="./js/carousel.js"></script>
     <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/project-modal.js"></script>
   </body>
 </html>
