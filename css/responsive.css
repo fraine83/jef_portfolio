@@ -1,0 +1,244 @@
+/* =========================
+   MOBILE — 480px AND BELOW
+========================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-padding: 1rem;
+        --section-padding: 4rem;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+   
+    .logo {
+    margin: 0;
+}
+    .navbar {
+        position: relative;
+        min-height: 72px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 42px;
+        height: 42px;
+        gap: 5px;
+
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .nav-toggle span {
+        display: block;
+
+        width: 24px;
+        height: 2px;
+
+        background: var(--color-text);
+        border-radius: 2px;
+
+        transition:
+            transform var(--transition-normal),
+            opacity var(--transition-normal);
+    }
+
+
+    /* Mobile menu open */
+
+    .nav-links.is-open {
+        display: flex;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding:
+            var(--space-4)
+            var(--container-padding)
+            var(--space-6);
+
+        background: rgba(8, 11, 18, 0.97);
+
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+
+        backdrop-filter: blur(12px);
+
+        z-index: 1000;
+    }
+
+    .nav-links.is-open li {
+        width: 100%;
+    }
+
+    .nav-links.is-open a {
+        display: block;
+
+        width: 100%;
+        padding: var(--space-4) 0;
+
+        color: var(--color-text-secondary);
+
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-links.is-open li:last-child a {
+        border-bottom: 0;
+    }
+
+    .nav-links.is-open a:hover {
+        color: var(--color-accent);
+    }
+
+
+    /* Hamburger -> X */
+
+    .nav-toggle.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: auto;
+        padding-block: var(--space-10);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+        line-height: 1;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: var(--text-base);
+    }
+
+    .hero-actions {
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        flex: 1;
+    }
+
+
+    /* =========================
+       CAROUSEL
+    ========================= */
+
+    .hero-carousel {
+        width: 100%;
+        min-height: auto;
+        padding: var(--space-4);
+    }
+
+    .carousel-header {
+        font-size: 0.7rem;
+    }
+
+    .carousel-slide h2 {
+        font-size: var(--text-xl);
+    }
+
+    .carousel-slide p {
+        font-size: var(--text-sm);
+    }
+
+    .slide-visual {
+        margin-top: var(--space-4);
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+
+        gap: var(--space-5);
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+
+        padding: var(--space-6);
+    }
+
+    /* Reset desktop project positions */
+
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(3),
+    .project-card:nth-child(4),
+    .project-card:nth-child(5),
+    .project-card:nth-child(6) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+}
