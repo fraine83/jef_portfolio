@@ -790,7 +790,7 @@ body {
     top: 0;
     left: 50%;
     width: 140%;
-    height: 600px;
+    height: 2200px;
 
     transform: translateX(-50%);
 
@@ -810,33 +810,6 @@ body {
     position: relative;
     z-index: 1;
 }
-/* 
-.work-section::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    width: 70%;
-    height: 1px;
-
-    transform: translateX(-50%);
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(77, 163, 255, 0.45),
-        transparent
-    );
-
-    box-shadow:
-        0 0 18px rgba(77, 163, 255, 0.20),
-        0 0 40px rgba(77, 163, 255, 0.10);
-
-    z-index: 1;
-} */
-
 
 
 /* =========================
