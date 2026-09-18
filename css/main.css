@@ -214,12 +214,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
     
-    max-width: 680px;
+    max-width: 600px;
 }
 
-.hero-text {
+/* .hero-text {
     max-width: 650px;
-}
+} */
 
 
 .hero-eyebrow {
@@ -295,8 +295,11 @@ body {
 
 .btn-primary {
     background: var(--color-accent);
-    color: var(--color-bg);
-    
+    color: var(--color-bg);   
+}
+.btn-primary2 {
+    background: var(--color-accent);
+    color: var(--color-bg);   
 }
 
 .btn-primary:hover {
@@ -749,6 +752,17 @@ body {
         ),
         url("../assets/images/projects/linux-bg2.png");
 }
+/* VIRTUALIZATION */
+.virtualization-background {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 18, 0.85) 0%,
+            rgba(8, 11, 18, 0.60) 45%,
+            rgba(8, 11, 18, 0.52) 100%
+        ),
+        url("../assets/images/projects/virtualization-bg.png");
+}
 /* MIDNIGHT BLAST */
 .midnight-blast-background {
     background-image:
@@ -761,12 +775,75 @@ body {
         url("../assets/images/projects/midnight-blast-bg.png");
 }
 
+/* =========================
+   WORK / PROJECTS
+========================= */
+.work-section {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg);
+}
+
+.work-section::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 140%;
+    height: 600px;
+
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        ellipse 55% 55% at 50% 15%,
+        rgba(77, 163, 255, 0.24) 0%,
+        rgba(40, 125, 204, 0.14) 28%,
+        rgba(20, 67, 115, 0.07) 48%,
+        transparent 72%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.work-section > .container {
+    position: relative;
+    z-index: 1;
+}
+/* 
+.work-section::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 70%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(77, 163, 255, 0.45),
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px rgba(77, 163, 255, 0.20),
+        0 0 40px rgba(77, 163, 255, 0.10);
+
+    z-index: 1;
+} */
+
+
 
 /* =========================
    PROJECT MODAL
 ========================= */
-
-
 
 .project-modal {
     position: fixed;
