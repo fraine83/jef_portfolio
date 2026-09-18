@@ -1,6 +1,6 @@
 const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".carousel-dot");
-const status = document.querySelector(".carousel-status");
+const carouselStatus = document.querySelector(".carousel-status");
 
 let currentSlide = 0;
 
@@ -28,7 +28,7 @@ function showSlide(index) {
     dots[currentSlide].classList.add("is-active");
 
     // Update 01 / 04
-    status.textContent =
+    carouselStatus.textContent =
         `${String(currentSlide + 1).padStart(2, "0")} / ` +
         `${String(slides.length).padStart(2, "0")}`;
 }
