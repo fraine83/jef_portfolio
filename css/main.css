@@ -365,7 +365,7 @@ body {
 
     background-size: 32px 32px;
 
-    pointer-events: none;
+    pointer-events: cursor;
 }
 
 
@@ -1249,8 +1249,4 @@ body {
     text-align: right;
 
     transition: color var(--transition-fast);
-}
-
-.contact-link:hover strong {
-    color: var(--color-accent-light);
 }
