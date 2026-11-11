@@ -305,7 +305,7 @@ body {
 }
 
 .btn-primary:hover {
-    
+    color: transparent;
     background: var(--color-accent-light);
 }
 
@@ -701,7 +701,27 @@ body {
         ),
         url("../assets/images/projects/shopulse-bg.png");
 }
+.project-card:has(.shoppulse-background) .link-to-site {
+    position: absolute;
+    bottom: 18px;
+    left: 30px;
+}
+.shoppulse-link {
+    position: absolute;
+    bottom: 18px;
+    left: 30px;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    text-decoration: none;
+}
+.link-to-site:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+     transition:
+        color var(--transition-fast),
+        text-decoration var(--transition-fast);
 
+}
 .automation-background {
     background-image:
         linear-gradient(
